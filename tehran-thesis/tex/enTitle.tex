@@ -1,0 +1,26 @@
+% !TeX root=../main.tex
+% در این فایل، عنوان پایان‌نامه، مشخصات خود و چکیده پایان‌نامه را به انگلیسی، وارد کنید.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\latinuniversity{University of Tehran}
+\latincollege{College of Engineering}
+\latinfaculty{School of Electrical and Computer Engineering}
+% \latindepartment{Artificial Intelligence}
+\latinsubject{Computer Engineering}
+\latinfield{Artificial Intelligence}
+\latintitle{Fine-Tuning Language Models for Semantic Invariance in the Latent Space of Sparse Autoencoders}
+\firstlatinsupervisor{Dr. Mostafa Tavassolipour}
+%\secondlatinsupervisor{Second Supervisor}
+%\firstlatinadvisor{[Advisor Name]}
+\latinname{Reza}
+\latinsurname{Chehreghani}
+\latinthesisdate{2026}
+\latinkeywords{Language Models, Sparse Autoencoders, Parameter-Efficient Fine-Tuning, Contrastive Learning, Paraphrase Identification, Mechanistic Interpretability}
+\en-abstract{
+Large language models learn their vector representations primarily to predict the next token, an objective that does not necessarily shape sentence representations along the semantic axes that matter to humans. The PAWS dataset exposes this gap starkly: sentence pairs with very high lexical overlap that are labeled as either paraphrases or non-paraphrases.% A preliminary analysis in this thesis shows that, in a pretrained language model, the representational distance between these two classes of pairs is not well separated.
+
+This thesis proposes a parameter-efficient fine-tuning method in which an invariance loss -- pulling paraphrastic pairs together and pushing non-paraphrastic pairs apart -- is applied not to the model's raw residual-stream activations, but to the latent codes produced by passing those activations through a frozen, pretrained sparse autoencoder (SAE). This choice is motivated by the phenomenon of feature superposition in the raw activation space of language models, which makes the effect of a direct invariance pressure in that space unpredictable.% To control the risk of the SAE drifting out of validity during training, an explicit reconstruction regularizer, based on the SAE's own reconstruction error, is added to the total training objective.
+
+The method is implemented on Pythia-70m-deduped with a LoRA adapter and evaluated across a systematic experimental grid: four experimental conditions (a no-invariance control, raw-space invariance, SAE-space invariance, and an augmented variant of the latter), five values of the invariance-loss weight, and ten choices of target layer(s), for a total of 160 independent training runs.
+
+Results show that applying the invariance loss in the SAE latent space consistently produces better separation between paraphrastic and non-paraphrastic pairs (measured by area under the ROC curve) than applying the same loss in the raw activation space, or than applying no invariance loss at all. This improvement depends strongly on the depth of the targeted layer (mid-to-late layers, not early ones) and on the loss weight, and targeting multiple layers simultaneously has a super-additive effect. However, the largest gains coincide with transient training instability and a measurable drop in SAE reconstruction fidelity; the proposed regularizer fully controls this cost at low loss weights but only partially at high ones. Accordingly, this thesis identifies a balanced configuration -- a more moderate loss weight -- that achieves nearly the same gain without this cost. By presenting this balanced picture -- rather than reporting only the best raw result -- this thesis introduces a new use for sparse autoencoders, beyond their conventional role in post-hoc interpretability.
+}

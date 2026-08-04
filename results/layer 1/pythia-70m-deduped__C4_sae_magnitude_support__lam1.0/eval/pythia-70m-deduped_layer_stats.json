@@ -1,0 +1,56 @@
+[
+  {
+    "layer": 0,
+    "auroc_raw": 0.565422,
+    "auroc_sae": 0.545509,
+    "delta_auroc": -0.01991299999999996,
+    "mannwhitney_p_raw": 2.0285256378908655e-07,
+    "mannwhitney_p_sae": 0.000212387906339948,
+    "top5pct_latent_share": 0.682110276788937
+  },
+  {
+    "layer": 1,
+    "auroc_raw": 0.5735895,
+    "auroc_sae": 0.5646169999999999,
+    "delta_auroc": -0.00897250000000005,
+    "mannwhitney_p_raw": 6.034277930264846e-09,
+    "mannwhitney_p_sae": 2.808778301218182e-07,
+    "top5pct_latent_share": 0.5959889294047535
+  },
+  {
+    "layer": 2,
+    "auroc_raw": 0.594697,
+    "auroc_sae": 0.5886985,
+    "delta_auroc": -0.005998500000000018,
+    "mannwhitney_p_raw": 1.1225472593314656e-13,
+    "mannwhitney_p_sae": 3.237197010013466e-12,
+    "top5pct_latent_share": 0.5302248066877525
+  },
+  {
+    "layer": 3,
+    "auroc_raw": 0.5977655,
+    "auroc_sae": 0.5924174999999999,
+    "delta_auroc": -0.005348000000000019,
+    "mannwhitney_p_raw": 1.85249645632714e-14,
+    "mannwhitney_p_sae": 4.1290693761033986e-13,
+    "top5pct_latent_share": 0.5413709849382881
+  },
+  {
+    "layer": 4,
+    "auroc_raw": 0.6236765,
+    "auroc_sae": 0.6226475,
+    "delta_auroc": -0.0010289999999999466,
+    "mannwhitney_p_raw": 4.97074396348398e-22,
+    "mannwhitney_p_sae": 1.0716336387040396e-21,
+    "top5pct_latent_share": 0.3521581843427892
+  },
+  {
+    "layer": 5,
+    "auroc_raw": 0.6263509999999999,
+    "auroc_sae": 0.61108,
+    "delta_auroc": -0.015270999999999924,
+    "mannwhitney_p_raw": 6.554195594857156e-23,
+    "mannwhitney_p_sae": 3.915886501344894e-18,
+    "top5pct_latent_share": 0.32297172140198577
+  }
+]
